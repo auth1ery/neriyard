@@ -69,7 +69,7 @@ pre{background:var(--code-bg);color:var(--code-fg);padding:1rem;font-size:.75rem
 const app=document.getElementById('app');
 const btn=document.getElementById('themeBtn');
 let dark=localStorage.getItem('ny_dark')==='1';
-function applyTheme(){document.documentElement.toggleAttribute('data-dark',dark);btn.textContent=dark?'light':'dark'}
+function applyTheme(){document.documentElement.toggleAttribute('data-dark',dark);btn.textContent=dark?'light (HORRIBLE)':'dark'}
 applyTheme();
 btn.onclick=function(){dark=!dark;localStorage.setItem('ny_dark',dark?'1':'0');applyTheme()};
 function getParam(k){return new URLSearchParams(location.search).get(k)}
